@@ -1,3 +1,5 @@
+# Sample: python3 snake_2_camel.py -i ~/Downloads/result.csv -o camelCase.csv
+
 from argparse import ArgumentParser
 import os.path
 
@@ -35,4 +37,4 @@ with open(in_filename, 'r') as reader, open(out_filename, 'w') as writer:
   # while (line := reader.readline()):
   lines = reader.readlines()
   for line in lines:
-    writer.write(to_camel_case(line))
+    writer.write(to_camel_case(line).replace('\n',',\n'))
