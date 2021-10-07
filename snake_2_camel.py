@@ -37,4 +37,4 @@ with open(in_filename, 'r') as reader, open(out_filename, 'w') as writer:
   # while (line := reader.readline()):
   lines = reader.readlines()
   for line in lines:
-    writer.write(to_camel_case(line).replace('\n',',\n'))
+    writer.write("\"" + to_camel_case(line).replace('s\n','",\n'))
